@@ -19,11 +19,28 @@ import com.app.latihan_jetpack.ui.theme.LatihanJetpackTheme
  */
 class MainActivity : ComponentActivity() {
 
+    /*
+    * Function unutk mengonveride function onCreate pada Parents, untuk mengisi ui maupun logic aplikasi
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        /*
+            SetContent di gunakan untuk menyeting tampilan UI
+         */
         setContent {
+
+            /*
+            Latihan JetpackComposeTheme adalah Tema yang telah kita buat sebelumnya
+             */
             LatihanJetpackTheme {
+
+                /*
+                *
+                    Scaffold di Jetpack Compose adalah komponen layout bawaan dari Material Design yang menyusun kerangka dasar tampilan aplikasi. Fungsinya mirip seperti ConstraintLayout, CoordinatorLayout, atau DrawerLayout di XML, tapi khusus dibuat untuk Compose.
+                *
+                 */
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "Android",
@@ -35,6 +52,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+/*
+* Function Greating sebuah fucntion berisi layout untuk menampikan Text
+* Memiliki Parameter Name dengan value String, dan Modifier untuk membuat styling
+ */
 @Composable //Di gunakan menandai sebuah fungsi yang digunakan untuk membangun UI dengan Jetpack Compose
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
