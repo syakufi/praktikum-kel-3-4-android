@@ -2,7 +2,7 @@ package com.app.latihan_jetpack.ui.theme
 /*
 * File ini untuk mendefiniskan warna kedalam variabel
 * Penggunaannya cukup dengan memanggil nama variabel nya
- */
+*/
 import androidx.compose.ui.graphics.Color
 
 val Purple80 = Color(0xFFD0BCFF)
